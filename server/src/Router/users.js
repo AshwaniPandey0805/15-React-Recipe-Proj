@@ -1,7 +1,7 @@
 import express from "express";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
-import { UserModel } from "../model/UserModel.js";
+import { UserModel } from "../model/User.js";
 
 const router  = express.Router();
 
@@ -33,7 +33,7 @@ router.post("/login", async(req, res)=>{
     }
 
     const token = jwt.sign({id : user._id}, "secret");
-    res.json({token , userId : user._id});
+    res.json({token , userID : user._id});
 })
 
 
