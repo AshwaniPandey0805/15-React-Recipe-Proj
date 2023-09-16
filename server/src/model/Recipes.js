@@ -8,10 +8,10 @@ const RecipeSchema = new moogoose.Schema({
         ingredienats: [{ type: String, required: true }],
         instructions: { type: String, required: true },
         imageURL: { type: String, required: true },
-        cookingItem: { type: String, required: true },
+        cookingTime: { type: Number, required: true },
         UserOwner: {
             type: moogoose.Schema.Types.ObjectId,
-            ref: "User", 
+            ref: "users", 
             required: true,
     },
 });
