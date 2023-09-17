@@ -17,4 +17,4 @@ mongoose.connect("mongodb+srv://ashwani0805:recipes12345@recipe.hpthq0o.mongodb.
 
 
 
-app.listen(3001, ()=> console.log("Server started"));
+app.listen(3000, ()=> console.log("Server started"));

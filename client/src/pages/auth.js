@@ -23,7 +23,7 @@ const Login = ()=>{
     const onSubmit = async (event) =>{
         event.preventDefault();
         try {
-            const response = await axios.post("http://localhost:3001/auth/login", 
+            const response = await axios.post("http://localhost:3000/auth/login", 
                 {username, password});
 
         setCookies('access_token', response.data.token);
@@ -59,7 +59,7 @@ const Register = ()=>{
     const onSubmit = async (event)=>{
         event.preventDefault();
         try {
-            axios.post("http://localhost:3001/auth/register", {
+            axios.post("http://localhost:3000/auth/register", {
                 username, password
             });
             alert("Registration Completed! Now Login..")
